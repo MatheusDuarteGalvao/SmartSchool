@@ -50,7 +50,7 @@ namespace SmartSchool.WebAPI.Controllers
         [HttpGet("ByName")]
         public IActionResult GetByName(string nome, string Sobrenome)
         {
-            var aluno = Alunos.FirstOrDefault(a => 
+            var aluno = Alunos.FirstOrDefault(a =>
                 a.Nome.Contains(nome) && a.Sobrenome.Contains(Sobrenome)
             );
             if (aluno == null) return BadRequest("O Aluno não foi encontrado");
